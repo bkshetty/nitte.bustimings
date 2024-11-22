@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -110,3 +111,117 @@
     </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Timings</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .background {
+            background-image: url('https://images.wallpapersden.com/image/download/abstract-shapes-2021-minimalist_bG1lZm6UmZqaraWkpJRmbmdmrWZlbWY.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .welcome-text {
+            opacity: 0;
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 50px;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .visible {
+            opacity: 1;
+        }
+
+        .hidden-section {
+            display: none;
+        }
+    </style>
+</head>
+<body class="background h-screen flex flex-col items-center justify-center px-8">
+    <!-- Nitte University Logo -->
+    <div class="w-full flex justify-center mb-6">
+        <img src="https://upload.wikimedia.org/wikipedia/en/1/1e/NITTE_Deemed_Univerity_logo.svg" alt="Nitte University Logo" class="w-24 h-auto">
+    </div>
+
+    <!-- Welcome Text -->
+    <h1 id="welcome-text" class="welcome-text">Nitte Bus Timings</h1>
+
+    <!-- Buttons for navigation -->
+    <div class="flex justify-between space-x-8 mb-8">
+        <button onclick="location.href='left-side-timings.html'" class="bg-blue-500 text-white py-3 px-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 focus:outline-none">
+            KARKALA
+        </button>
+        <button onclick="location.href='right-side-timings.html'" class="bg-green-500 text-white py-3 px-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 focus:outline-none">
+            UDUPI/MANGLORE
+        </button>
+    </div>
+
+    <!-- New Entries Dropdown -->
+    <div class="w-full max-w-lg mt-8">
+        <button id="toggle-section" class="bg-gray-700 text-white py-3 px-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 focus:outline-none w-full">
+            New Entries
+        </button>
+        <div id="new-entries-section" class="hidden-section bg-white p-6 rounded-lg shadow-lg mt-4">
+            <h2 class="text-2xl font-bold mb-4">Submit New Entry</h2>
+            <form action="mailto:bk11shetty@gmail.com" method="post" enctype="text/plain">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+                    <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="feedback" class="block text-gray-700 text-sm font-bold mb-2">Details:</label>
+                    <textarea id="feedback" name="feedback" rows="4" class="w-full p-2 border border-gray-300 rounded" required></textarea>
+                </div>
+                <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-lg shadow-lg transform transition-transform hover:scale-105 focus:outline-none">
+                    Submit Entry
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w-full bg-teal-500  text-white py-4 mt-12">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Nitte Bus Timings Guide</p>
+            <a href="https://www.instagram.com/bk11shetty/" class="text-blue-400 hover:underline" target="_blank">
+                <i class="fab fa-instagram"></i> Follow me on Instagram
+            </a>
+        </div>
+    </footer>
+
+    <!-- JavaScript for welcome text animation and dropdown -->
+    <script>
+        // Welcome text animation
+        window.onload = function() {
+            const welcomeText = document.getElementById('welcome-text');
+            setTimeout(() => {
+                welcomeText.classList.add('visible');
+            }, 500);
+        };
+
+        // Dropdown toggle for New Entries section
+        const toggleButton = document.getElementById('toggle-section');
+        const newEntriesSection = document.getElementById('new-entries-section');
+        toggleButton.addEventListener('click', function() {
+            if (newEntriesSection.classList.contains('hidden-section')) {
+                newEntriesSection.classList.remove('hidden-section');
+            } else {
+                newEntriesSection.classList.add('hidden-section');
+            }
+        });
+    </script>
+</body>
+</html>
+>>>>>>> c7b7b2725b9874f92d5cd070dfd3a9c186d792cb
